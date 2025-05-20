@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
  * 3 - Maybe other stuff later
  */
 
-axios.defaults.baseURL = "http://127.0.0.1:4010/api/v1/";
+axios.defaults.baseURL = "http://34.202.229.25:4010/api/v1/";
 
 // Export our custom axios instance with auth headers added
 export const api = axios.create({
