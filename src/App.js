@@ -8,8 +8,12 @@ function App() {
 
   const getShiftReponse = async () => {
     const shiftResponse = await ShiftService.getShifts();
-    console.log("shiftResponse", shiftResponse);
-    setShifts(shiftResponse?.data);
+
+    if(shiftResponse.status) {
+      setShifts(shiftResponse?.data);
+    }else {
+      alert(shiftResponse.message);
+    }
   };
 
   useEffect(() => {

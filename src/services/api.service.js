@@ -22,7 +22,7 @@ api.interceptors.response.use(
   },
   (err) => {
     console.error("Error", err);
-    switch (err.response.status) {
+    switch (err?.response?.status) {
       case 401:
         break;
       default:
@@ -32,7 +32,7 @@ api.interceptors.response.use(
     return {
       data: {
         status: false,
-        message: err.response.data.message,
+        message: err?.response?.data?.message || "Server unavailable, start backend server please",
         data: null,
       },
     };
