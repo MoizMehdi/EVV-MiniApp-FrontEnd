@@ -2,6 +2,7 @@
   "name": "shifttrack",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://34.202.229.25:4010",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
